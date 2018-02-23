@@ -22,6 +22,8 @@ class ShunyuViewController: UIViewController, UITableViewDataSource, UITableView
         
         super.viewDidLoad()
         
+        shunyuTextLabel.text = saveData.object(forkey: "shunyu")
+        
         incometable.dataSource = self
         incometable.delegate = self
 
@@ -34,7 +36,7 @@ class ShunyuViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    shunyuTextField.text = saveData.object(forkey: "shunyu")
+//    shunyuTextField.text = saveData.object(forkey: "shunyu")
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return incomeArray.count
