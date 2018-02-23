@@ -8,14 +8,24 @@
 
 import UIKit
 
-class ShunyuViewController: UIViewController {
+class ShunyuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+  
+    
+
+    @IBOutlet var incometable: UITableView!
+    @IBOutlet var spendingtable: UITableView!
+    
+    var incomeArray = [String]()
+    var incomecontentArray = [String]()
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        incometable.dataSource = self
+        incometable.delegate = self
 
         // Do any additional setup after loading the view.
-        
     }
 
 
@@ -23,6 +33,20 @@ class ShunyuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    shunyuTextField.text = saveData.object(forkey: "shunyu")
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return incomeArray.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "incomeCell")
+        
+        cell?.textLabel?.text = incomeArray[indexPath.row]
+        cell?.textLabel?.text = incomecontentArray[indexPath.row]
+        
+        return cell!
+        }
     
 
     /*
