@@ -19,6 +19,7 @@
 		070EB23D202DB873003B3864 /* 支出.png in Resources */ = {isa = PBXBuildFile; fileRef = 070EB23C202DB873003B3864 /* 支出.png */; };
 		070EB23F202DE114003B3864 /* ShunyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070EB23E202DE114003B3864 /* ShunyuViewController.swift */; };
 		070EB241202DE126003B3864 /* ShishutuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070EB240202DE126003B3864 /* ShishutuViewController.swift */; };
+		079070C920A5A96F00718B48 /* black0044.png in Resources */ = {isa = PBXBuildFile; fileRef = 079070C820A5A96F00718B48 /* black0044.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		070EB23C202DB873003B3864 /* 支出.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支出.png"; sourceTree = "<group>"; };
 		070EB23E202DE114003B3864 /* ShunyuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShunyuViewController.swift; sourceTree = "<group>"; };
 		070EB240202DE126003B3864 /* ShishutuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShishutuViewController.swift; sourceTree = "<group>"; };
+		079070C820A5A96F00718B48 /* black0044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black0044.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		070EB207202DA9A7003B3864 /* PocketMoneyBook */ = {
 			isa = PBXGroup;
 			children = (
+				079070C820A5A96F00718B48 /* black0044.png */,
 				070EB23C202DB873003B3864 /* 支出.png */,
 				070EB23A202DB7FF003B3864 /* 収入.png */,
 				070EB236202DB6CB003B3864 /* 残高.png */,
@@ -251,6 +254,7 @@
 				070EB237202DB6CB003B3864 /* 残高.png in Resources */,
 				070EB213202DA9A7003B3864 /* LaunchScreen.storyboard in Resources */,
 				070EB210202DA9A7003B3864 /* Assets.xcassets in Resources */,
+				079070C920A5A96F00718B48 /* black0044.png in Resources */,
 				070EB23D202DB873003B3864 /* 支出.png in Resources */,
 				070EB20E202DA9A7003B3864 /* Main.storyboard in Resources */,
 			);

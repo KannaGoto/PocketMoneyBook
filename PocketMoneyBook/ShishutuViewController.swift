@@ -9,6 +9,13 @@
 import UIKit
 
 class ShishutuViewController: UIViewController {
+    
+    @IBOutlet var spendingtable: UITableView!
+    
+    var spendingArray:[String] = []
+    var spendingcontentArray:[String] = []
+    let saveData = UserDefaults.standard
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +26,18 @@ class ShishutuViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return spendingArray.count
+        }
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "spendingCell")
+            
+            cell?.detailTextLabel?.text = spendingArray[indexPath.row]
+            cell?.textLabel?.text = spendingcontentArray[indexPath.row]
+            
+            return cell!
+        }
     }
     
 

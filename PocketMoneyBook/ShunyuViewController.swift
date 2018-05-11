@@ -13,16 +13,21 @@ class ShunyuViewController: UIViewController, UITableViewDataSource, UITableView
     
 
     @IBOutlet var incometable: UITableView!
-    @IBOutlet var spendingtable: UITableView!
     
-    var incomeArray = [String]()
-    var incomecontentArray = [String]()
+    var incomeArray:[String] = []
+    var incomecontentArray:[String] = []
+     let saveData = UserDefaults.standard
 
     override func viewDidLoad() {
         
+        
         super.viewDidLoad()
         
-        shunyuTextLabel.text = saveData.object(forkey: "shunyu")
+//        let saveData = UserDefaults.standard
+//        incomeArray = saveData.array(forKey: "shunyu") as! [String]
+//        incomecontentArray = saveData.array(forKey: "incomecontent") as! [String]
+//        print("中身は",incomeArray)
+//        shunyuTextLabel.text = saveData.object(forkey: "shunyu")
         
         incometable.dataSource = self
         incometable.delegate = self
@@ -37,6 +42,7 @@ class ShunyuViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 //    shunyuTextField.text = saveData.object(forkey: "shunyu")
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return incomeArray.count
@@ -44,7 +50,7 @@ class ShunyuViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "incomeCell")
         
-        cell?.textLabel?.text = incomeArray[indexPath.row]
+        cell?.detailTextLabel?.text = incomeArray[indexPath.row]
         cell?.textLabel?.text = incomecontentArray[indexPath.row]
         
         return cell!

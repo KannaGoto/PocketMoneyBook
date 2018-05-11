@@ -15,10 +15,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var incomecontentTextField: UITextField!
     @IBOutlet var spendingcontentTextField: UITextField!
     @IBOutlet var zandakaLabel: UILabel!
-    @IBOutlet var incomeLabel: UILabel!
-    @IBOutlet var spendingLabel: UILabel!
-    @IBOutlet var incomecontentLabel: UILabel!
-    @IBOutlet var spendingcontentLabel: UILabel!
+//    @IBOutlet var incomeLabel: UILabel!
+//    @IBOutlet var spendingLabel: UILabel!
+//    @IBOutlet var incomecontentLabel: UILabel!
+//    @IBOutlet var spendingcontentLabel: UILabel!
     
     var number: Int = 0
     var income: String! = ""
@@ -62,8 +62,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         incomeArray.append(shunyuTextField.text!)
         incomecontentArray.append(incomecontentTextField.text!)
         
-        incomeLabel.text = String(describing: incomeArray)
-        incomecontentLabel.text = String(describing: incomecontentArray)
+//        incomeLabel.text = String(describing: incomeArray)
+//        incomecontentLabel.text = String(describing: incomecontentArray)
         
         let alert: UIAlertController = UIAlertController(title: "保存", message: "収入の保存が完了しました。",
                                                          preferredStyle: .alert)
@@ -95,8 +95,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         spendingArray.append(shishutuTextField.text!)
         spendingcontentArray.append(spendingcontentTextField.text!)
         
-        spendingLabel.text = String(describing: spendingArray)
-        spendingcontentLabel.text = String(describing: spendingcontentArray)
+//        spendingLabel.text = String(describing: spendingArray)
+//        spendingcontentLabel.text = String(describing: spendingcontentArray)
         
         let alert: UIAlertController = UIAlertController(title: "保存", message: "支出の保存が完了しました。",
                                                          preferredStyle: .alert)
@@ -112,11 +112,41 @@ class ViewController: UIViewController, UITextFieldDelegate {
         )
         
         present(alert, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func incomedata() {
+        performToShunyu()
+    }
+    @IBAction func spendingdata() {
+        performToShishutu()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func performToShunyu() {
+        performSegue(withIdentifier: "toshunyudata", sender: nil)
+    }
+    
+    func performToShishutu() {
+        performSegue(withIdentifier: "toshishutudata", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toshunyudata" {
+            let shunyuViewController = segue.destination as! ShunyuViewController
+            shunyuViewController.incomeArray = self.incomeArray
+            shunyuViewController.incomecontentArray = self.incomecontentArray
+        }
+        if segue.identifier == "toshishutudata" {
+            let shishutuViewController = segue.destination as! ShishutuViewController
+            shishutuViewController.spendingArray = self.spendingArray
+            shishutuViewController.spendingcontentArray = self.spendingcontentArray
+            
+        }
     }
 
 }
