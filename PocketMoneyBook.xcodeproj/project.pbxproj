@@ -14,12 +14,14 @@
 		070EB213202DA9A7003B3864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070EB211202DA9A7003B3864 /* LaunchScreen.storyboard */; };
 		070EB21E202DA9A7003B3864 /* PocketMoneyBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070EB21D202DA9A7003B3864 /* PocketMoneyBookTests.swift */; };
 		070EB229202DA9A7003B3864 /* PocketMoneyBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070EB228202DA9A7003B3864 /* PocketMoneyBookUITests.swift */; };
-		070EB237202DB6CB003B3864 /* 残高.png in Resources */ = {isa = PBXBuildFile; fileRef = 070EB236202DB6CB003B3864 /* 残高.png */; };
 		070EB23B202DB7FF003B3864 /* 収入.png in Resources */ = {isa = PBXBuildFile; fileRef = 070EB23A202DB7FF003B3864 /* 収入.png */; };
 		070EB23D202DB873003B3864 /* 支出.png in Resources */ = {isa = PBXBuildFile; fileRef = 070EB23C202DB873003B3864 /* 支出.png */; };
 		070EB23F202DE114003B3864 /* ShunyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070EB23E202DE114003B3864 /* ShunyuViewController.swift */; };
 		070EB241202DE126003B3864 /* ShishutuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070EB240202DE126003B3864 /* ShishutuViewController.swift */; };
 		079070C920A5A96F00718B48 /* black0044.png in Resources */ = {isa = PBXBuildFile; fileRef = 079070C820A5A96F00718B48 /* black0044.png */; };
+		079070CD20A94B5800718B48 /* ShunyuKinyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079070CC20A94B5800718B48 /* ShunyuKinyuViewController.swift */; };
+		079070CF20A94C4A00718B48 /* ShishutuKinyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079070CE20A94C4A00718B48 /* ShishutuKinyuViewController.swift */; };
+		079070D120A9574200718B48 /* red0072.png in Resources */ = {isa = PBXBuildFile; fileRef = 079070D020A9574200718B48 /* red0072.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +55,14 @@
 		070EB224202DA9A7003B3864 /* PocketMoneyBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketMoneyBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070EB228202DA9A7003B3864 /* PocketMoneyBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketMoneyBookUITests.swift; sourceTree = "<group>"; };
 		070EB22A202DA9A7003B3864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		070EB236202DB6CB003B3864 /* 残高.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "残高.png"; sourceTree = "<group>"; };
 		070EB23A202DB7FF003B3864 /* 収入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "収入.png"; sourceTree = "<group>"; };
 		070EB23C202DB873003B3864 /* 支出.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支出.png"; sourceTree = "<group>"; };
 		070EB23E202DE114003B3864 /* ShunyuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShunyuViewController.swift; sourceTree = "<group>"; };
 		070EB240202DE126003B3864 /* ShishutuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShishutuViewController.swift; sourceTree = "<group>"; };
 		079070C820A5A96F00718B48 /* black0044.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black0044.png; sourceTree = "<group>"; };
+		079070CC20A94B5800718B48 /* ShunyuKinyuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShunyuKinyuViewController.swift; sourceTree = "<group>"; };
+		079070CE20A94C4A00718B48 /* ShishutuKinyuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShishutuKinyuViewController.swift; sourceTree = "<group>"; };
+		079070D020A9574200718B48 /* red0072.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red0072.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,16 +113,18 @@
 		070EB207202DA9A7003B3864 /* PocketMoneyBook */ = {
 			isa = PBXGroup;
 			children = (
+				079070D020A9574200718B48 /* red0072.png */,
 				079070C820A5A96F00718B48 /* black0044.png */,
 				070EB23C202DB873003B3864 /* 支出.png */,
 				070EB23A202DB7FF003B3864 /* 収入.png */,
-				070EB236202DB6CB003B3864 /* 残高.png */,
 				070EB208202DA9A7003B3864 /* AppDelegate.swift */,
 				070EB20A202DA9A7003B3864 /* ViewController.swift */,
 				070EB20C202DA9A7003B3864 /* Main.storyboard */,
 				070EB20F202DA9A7003B3864 /* Assets.xcassets */,
 				070EB211202DA9A7003B3864 /* LaunchScreen.storyboard */,
 				070EB214202DA9A7003B3864 /* Info.plist */,
+				079070CC20A94B5800718B48 /* ShunyuKinyuViewController.swift */,
+				079070CE20A94C4A00718B48 /* ShishutuKinyuViewController.swift */,
 				070EB23E202DE114003B3864 /* ShunyuViewController.swift */,
 				070EB240202DE126003B3864 /* ShishutuViewController.swift */,
 			);
@@ -251,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				070EB23B202DB7FF003B3864 /* 収入.png in Resources */,
-				070EB237202DB6CB003B3864 /* 残高.png in Resources */,
+				079070D120A9574200718B48 /* red0072.png in Resources */,
 				070EB213202DA9A7003B3864 /* LaunchScreen.storyboard in Resources */,
 				070EB210202DA9A7003B3864 /* Assets.xcassets in Resources */,
 				079070C920A5A96F00718B48 /* black0044.png in Resources */,
@@ -282,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				070EB23F202DE114003B3864 /* ShunyuViewController.swift in Sources */,
+				079070CD20A94B5800718B48 /* ShunyuKinyuViewController.swift in Sources */,
+				079070CF20A94C4A00718B48 /* ShishutuKinyuViewController.swift in Sources */,
 				070EB20B202DA9A7003B3864 /* ViewController.swift in Sources */,
 				070EB209202DA9A7003B3864 /* AppDelegate.swift in Sources */,
 				070EB241202DE126003B3864 /* ShishutuViewController.swift in Sources */,

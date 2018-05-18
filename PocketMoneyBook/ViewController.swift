@@ -8,40 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
     
-    @IBOutlet var shunyuTextField: UITextField!
-    @IBOutlet var shishutuTextField: UITextField!
-    @IBOutlet var incomecontentTextField: UITextField!
-    @IBOutlet var spendingcontentTextField: UITextField!
-    @IBOutlet var zandakaLabel: UILabel!
-//    @IBOutlet var incomeLabel: UILabel!
-//    @IBOutlet var spendingLabel: UILabel!
-//    @IBOutlet var incomecontentLabel: UILabel!
-//    @IBOutlet var spendingcontentLabel: UILabel!
+    var ShunyuVC: ShunyuKinyuViewController!
+    var ShishutuVC: ShishutuKinyuViewController!
     
-    var number: Int = 0
-    var income: String! = ""
-    var spending: String! = ""
-    var incomecontent: String! = ""
-    var spendingcontent: String! = ""
-    
-    var incomeArray: [String] = []
-    var spendingArray: [String] = []
-    var incomecontentArray: [String] = []
-    var spendingcontentArray: [String] = []
-    
-    let saveData: UserDefaults = UserDefaults.standard
+    @IBOutlet weak var segmentButton: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    
-        shunyuTextField.delegate = self
-        shishutuTextField.delegate = self
-        incomecontentTextField.delegate = self
-        spendingcontentTextField.delegate = self
         
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let viewController1 = main.instantiateViewController(withIdentifier: "ShunyuVC")
+        let viewController2 = main.instantiateViewController(withIdentifier: "ShishutuVC")
+        
+        setup()
+        
+    }
+    
+    func setup() {
+        segmentButton.setTitle("収入", forSegmentAt: 0)
+        segmentButton.setTitle("支出", forSegmentAt: 1)
+        self.view.addSubview(ShunyuVC.view)
+        self.view.addSubview(ShishutuVC.view)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,107 +40,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func saveshunyu() {
-        saveData.set(shunyuTextField.text, forKey: "shunyu")
-        saveData.set(incomecontentTextField.text, forKey: "incomecontent")
+    @IBAction func segmentButton(_ sender: UISegmentedControl) {
         
-        income = shunyuTextField.text!
-        
-        number = number + Int(income)!
-        
-        zandakaLabel.text = String(number)
-        
-        incomeArray.append(shunyuTextField.text!)
-        incomecontentArray.append(incomecontentTextField.text!)
-        
-//        incomeLabel.text = String(describing: incomeArray)
-//        incomecontentLabel.text = String(describing: incomecontentArray)
-        
-        let alert: UIAlertController = UIAlertController(title: "保存", message: "収入の保存が完了しました。",
-                                                         preferredStyle: .alert)
-        
-        alert.addAction(
-                    UIAlertAction(
-                        title: "OK",
-                        style:  .default,
-                        handler:  { action in
-                            print("OKボタンが押されました！")
-                    }
-        )
-        )
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func saveshishutu() {
-        saveData.set(shishutuTextField.text, forKey: "shishutu")
-        saveData.set(spendingcontentTextField.text, forKey: "spendingcontent")
-
-        
-        spending = shishutuTextField.text!
-        
-        number = number - Int(spending)!
-        
-        zandakaLabel.text = String(number)
-        
-        spendingArray.append(shishutuTextField.text!)
-        spendingcontentArray.append(spendingcontentTextField.text!)
-        
-//        spendingLabel.text = String(describing: spendingArray)
-//        spendingcontentLabel.text = String(describing: spendingcontentArray)
-        
-        let alert: UIAlertController = UIAlertController(title: "保存", message: "支出の保存が完了しました。",
-                                                         preferredStyle: .alert)
-        
-        alert.addAction(
-            UIAlertAction(
-                title: "OK",
-                style:  .default,
-                handler:  { action in
-                    print("OKボタンが押されました！")
-            }
-            )
-        )
-        
-        present(alert, animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func incomedata() {
-        performToShunyu()
-    }
-    @IBAction func spendingdata() {
-        performToShishutu()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func performToShunyu() {
-        performSegue(withIdentifier: "toshunyudata", sender: nil)
-    }
-    
-    func performToShishutu() {
-        performSegue(withIdentifier: "toshishutudata", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toshunyudata" {
-            let shunyuViewController = segue.destination as! ShunyuViewController
-            shunyuViewController.incomeArray = self.incomeArray
-            shunyuViewController.incomecontentArray = self.incomecontentArray
-        }
-        if segue.identifier == "toshishutudata" {
-            let shishutuViewController = segue.destination as! ShishutuViewController
-            shishutuViewController.spendingArray = self.spendingArray
-            shishutuViewController.spendingcontentArray = self.spendingcontentArray
-            
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.view.bringSubview(toFront: ShunyuVC.view)
+            print("収入")
+        case 1:
+            self.view.bringSubview(toFront: ShishutuVC.view)
+            print("支出")
+        default:
+            print("")
         }
     }
 
 }
-
-
-
