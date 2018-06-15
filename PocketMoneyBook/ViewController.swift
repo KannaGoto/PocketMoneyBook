@@ -21,11 +21,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let viewController1 = main.instantiateViewController(withIdentifier: "ShunyuVC")
-        let viewController2 = main.instantiateViewController(withIdentifier: "ShishutuVC")
+        ShunyuVC = main.instantiateViewController(withIdentifier: "ShunyuVC") as! ShunyuKinyuViewController
+        ShishutuVC = main.instantiateViewController(withIdentifier: "ShishutuVC") as! ShishutuKinyuViewController
         
         setup()
-        
     }
     
     func setup() {
