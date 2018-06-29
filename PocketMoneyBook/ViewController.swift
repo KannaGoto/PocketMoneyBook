@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     func setup() {
         segmentButton.setTitle("収入", forSegmentAt: 0)
         segmentButton.setTitle("支出", forSegmentAt: 1)
-        self.view.addSubview(ShunyuVC.view)
         self.view.addSubview(ShishutuVC.view)
+        self.view.addSubview(ShunyuVC.view) 
     }
 
     override func didReceiveMemoryWarning() {

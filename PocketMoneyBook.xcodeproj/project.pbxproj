@@ -22,7 +22,6 @@
 		079070CF20A94C4A00718B48 /* ShishutuKinyuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079070CE20A94C4A00718B48 /* ShishutuKinyuViewController.swift */; };
 		079070D120A9574200718B48 /* red0072.png in Resources */ = {isa = PBXBuildFile; fileRef = 079070D020A9574200718B48 /* red0072.png */; };
 		07AA64F320CA955F00153987 /* black0027.png in Resources */ = {isa = PBXBuildFile; fileRef = 07AA64F220CA955F00153987 /* black0027.png */; };
-		07AA688420D3CBC100153987 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA688320D3CBC100153987 /* StartViewController.swift */; };
 		07AA688620D7712400153987 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AA688520D7712400153987 /* OtherViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,6 @@
 		079070CE20A94C4A00718B48 /* ShishutuKinyuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShishutuKinyuViewController.swift; sourceTree = "<group>"; };
 		079070D020A9574200718B48 /* red0072.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red0072.png; sourceTree = "<group>"; };
 		07AA64F220CA955F00153987 /* black0027.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black0027.png; sourceTree = "<group>"; };
-		07AA688320D3CBC100153987 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		07AA688520D7712400153987 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +125,6 @@
 				070EB20F202DA9A7003B3864 /* Assets.xcassets */,
 				070EB211202DA9A7003B3864 /* LaunchScreen.storyboard */,
 				070EB214202DA9A7003B3864 /* Info.plist */,
-				07AA688320D3CBC100153987 /* StartViewController.swift */,
 				07AA688520D7712400153987 /* OtherViewController.swift */,
 				079070CC20A94B5800718B48 /* ShunyuKinyuViewController.swift */,
 				079070CE20A94C4A00718B48 /* ShishutuKinyuViewController.swift */,
@@ -294,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				070EB23F202DE114003B3864 /* ShunyuViewController.swift in Sources */,
-				07AA688420D3CBC100153987 /* StartViewController.swift in Sources */,
 				079070CD20A94B5800718B48 /* ShunyuKinyuViewController.swift in Sources */,
 				079070CF20A94C4A00718B48 /* ShishutuKinyuViewController.swift in Sources */,
 				070EB20B202DA9A7003B3864 /* ViewController.swift in Sources */,

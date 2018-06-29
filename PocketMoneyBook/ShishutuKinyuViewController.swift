@@ -28,8 +28,8 @@ class ShishutuKinyuViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         
-//        shishutuTextField.delegate = self
-//        spendingcontentTextField.delegate = self
+        shishutuTextField.delegate = self
+        spendingcontentTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

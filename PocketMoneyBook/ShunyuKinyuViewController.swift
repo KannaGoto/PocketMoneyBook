@@ -28,8 +28,8 @@ class ShunyuKinyuViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 // Do any additional setup after loading the view.
         
-//        shunyuTextField.delegate = self
-//        incomecontentTextField.delegate = self
+        shunyuTextField.delegate = self
+        incomecontentTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
