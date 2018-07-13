@@ -69,6 +69,10 @@ class ShunyuKinyuViewController: UIViewController, UITextFieldDelegate {
         )
         
         present(alert, animated: true, completion: nil)
+        
+//        if let number = Int(shunyuTextField.text!) {
+//            UserDefaults.standard.set(number, value(forKey: "shunyu")
+//        }
     }
     
     
